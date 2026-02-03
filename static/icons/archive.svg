@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Hand-drawn list/document icon - 90s GeoCities style -->
+  <style>
+    .sketch {
+      fill: none;
+      stroke: #000;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .fill-sketch {
+      fill: #fff;
+      stroke: #000;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
+
+  <!-- Paper/document outline - slightly wonky -->
+  <path class="fill-sketch" d="
+    M14 8
+    L44 8.5
+    L50 15
+    L49.5 56
+    Q49 57 48 57
+    L15 56.5
+    Q14 56 14 55
+    Z
+  " />
+
+  <!-- Folded corner -->
+  <path class="sketch" d="M44 8.5 L44 15.5 L50 15" />
+
+  <!-- List lines - hand-drawn wobbly -->
+  <line x1="20" y1="24" x2="43" y2="24.5" class="sketch" stroke-width="2" />
+  <line x1="20" y1="32" x2="41" y2="31.5" class="sketch" stroke-width="2" />
+  <line x1="20" y1="40" x2="44" y2="40.5" class="sketch" stroke-width="2" />
+  <line x1="20" y1="48" x2="38" y2="47.5" class="sketch" stroke-width="2" />
+
+  <!-- Bullet points -->
+  <circle cx="17" cy="24" r="1.5" fill="#000" />
+  <circle cx="17" cy="32" r="1.5" fill="#000" />
+  <circle cx="17" cy="40" r="1.5" fill="#000" />
+  <circle cx="17" cy="48" r="1.5" fill="#000" />
+</svg>

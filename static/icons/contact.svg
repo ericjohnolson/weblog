@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Hand-drawn mail/envelope icon - 90s GeoCities style -->
+  <style>
+    .sketch {
+      fill: none;
+      stroke: #000;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .fill-sketch {
+      fill: #fff;
+      stroke: #000;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
+
+  <!-- Envelope body - slightly wonky -->
+  <path class="fill-sketch" d="
+    M6 16
+    L58 16.5
+    Q59 17 59 18
+    L58.5 48
+    Q58 49 57 49
+    L7 48.5
+    Q6 48 6 47
+    Z
+  " />
+
+  <!-- Envelope flap lines - V shape for the fold -->
+  <path class="sketch" d="
+    M6 16
+    L30 35
+    Q32 36.5 34 35
+    L58 16.5
+  " />
+
+  <!-- Bottom fold lines for depth -->
+  <path class="sketch" stroke-width="1.5" d="
+    M6 48 L24 34
+  " />
+  <path class="sketch" stroke-width="1.5" d="
+    M58 48 L40 34
+  " />
+
+  <!-- Little sketch accent marks for hand-drawn feel -->
+  <path stroke="#000" stroke-width="1" fill="none" opacity="0.3" d="M10 20 L12 22" />
+  <path stroke="#000" stroke-width="1" fill="none" opacity="0.3" d="M52 20 L50 22" />
+</svg>

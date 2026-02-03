@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Hand-drawn Enter/Door icon - 90s GeoCities style -->
+  <style>
+    .sketch {
+      fill: none;
+      stroke: #000;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .fill-sketch {
+      fill: #fff;
+      stroke: #000;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
+
+  <!-- Door frame - slightly wonky rectangle -->
+  <path class="fill-sketch" d="
+    M16 6
+    L48 6.5
+    Q49 7 49 8
+    L48.5 56
+    Q48 57 47 57
+    L17 56.5
+    Q16 56 16 55
+    Z
+  " />
+
+  <!-- Inner door panel -->
+  <path class="sketch" d="
+    M22 12
+    L42 12.5
+    L41.5 51
+    L22.5 50.5
+    Z
+  " />
+
+  <!-- Door handle -->
+  <ellipse cx="38" cy="34" rx="2.5" ry="3" fill="#000" />
+
+  <!-- Arrow pointing in - "Enter" style -->
+  <path class="sketch" stroke-width="3" d="
+    M4 32 L14 32
+  " />
+  <path class="sketch" stroke-width="2.5" d="
+    M10 27 L15 32 L10 37
+  " />
+
+  <!-- "ENTER" text suggestion with simple lines -->
+  <line x1="24" y1="22" x2="28" y2="22" class="sketch" stroke-width="1.5" />
+  <line x1="30" y1="22" x2="34" y2="22" class="sketch" stroke-width="1.5" />
+  <line x1="36" y1="22" x2="40" y2="22" class="sketch" stroke-width="1.5" />
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Hand-drawn question mark - 90s GeoCities style -->
+  <style>
+    .sketch {
+      fill: none;
+      stroke: #000;
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
+
+  <!-- Question mark curve - wobbly hand-drawn style -->
+  <path class="sketch" d="
+    M22 20
+    Q22 12 32 10
+    Q44 10 44 22
+    Q43 30 36 33
+    Q32 35 32 42
+  " />
+
+  <!-- Add a slight extra wobble line for sketch effect -->
+  <path class="sketch" stroke-width="1" opacity="0.3" d="
+    M23 19
+    Q24 13 32 11
+  " />
+
+  <!-- Dot below question mark - slightly oval for hand-drawn feel -->
+  <ellipse cx="32" cy="52" rx="4" ry="4.5" fill="#000" />
+
+  <!-- Small sketch accent -->
+  <path stroke="#000" stroke-width="1.5" fill="none" d="M28 52 Q32 50 36 52" opacity="0.2" />
+</svg>

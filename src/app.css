@@ -1,0 +1,793 @@
+/* ============================================
+   GEOCITIES RETRO STYLESHEET
+   A nostalgic tribute to the early web
+   ============================================ */
+
+/* --------------------------------------------
+   CSS CUSTOM PROPERTIES (Variables)
+   -------------------------------------------- */
+:root {
+	/* Colors - Classic Web Palette */
+	--color-link: #0000ee;
+	--color-visited: #551a8b;
+	--color-bg: #f5f5f0;
+	--color-text: #1a1a1a;
+	--color-text-muted: #555555;
+
+	/* Retro accent colors */
+	--color-highlight: #ffff00;
+	--color-border-light: #ffffff;
+	--color-border-dark: #808080;
+	--color-border-darker: #404040;
+	--color-code-bg: #eeeeee;
+	--color-code-border: #999999;
+
+	/* Typography */
+	--font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+		sans-serif;
+	--font-mono: 'Courier New', Courier, 'Lucida Console', Monaco, monospace;
+	--font-size-base: 18px;
+	--line-height-base: 1.6;
+
+	/* Spacing */
+	--spacing-xs: 0.25rem;
+	--spacing-sm: 0.5rem;
+	--spacing-md: 1rem;
+	--spacing-lg: 1.5rem;
+	--spacing-xl: 2rem;
+	--spacing-2xl: 3rem;
+
+	/* Layout */
+	--container-max: 960px;
+	--sidebar-width: 220px;
+}
+
+/* --------------------------------------------
+   CSS RESET / NORMALIZE
+   -------------------------------------------- */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	scroll-behavior: smooth;
+}
+
+body {
+	min-height: 100vh;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/* --------------------------------------------
+   BASE TYPOGRAPHY
+   -------------------------------------------- */
+body {
+	font-family: var(--font-body);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	color: var(--color-text);
+	background-color: var(--color-bg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.2;
+	font-weight: 700;
+	margin-bottom: var(--spacing-md);
+}
+
+h1 {
+	font-size: 2.25rem;
+	margin-top: var(--spacing-xl);
+}
+
+h2 {
+	font-size: 1.75rem;
+	margin-top: var(--spacing-xl);
+}
+
+h3 {
+	font-size: 1.375rem;
+	margin-top: var(--spacing-lg);
+}
+
+h4 {
+	font-size: 1.125rem;
+	margin-top: var(--spacing-lg);
+}
+
+h5,
+h6 {
+	font-size: 1rem;
+	margin-top: var(--spacing-md);
+}
+
+p {
+	margin-bottom: var(--spacing-md);
+}
+
+/* --------------------------------------------
+   LINKS - Classic Blue Underlined Style
+   -------------------------------------------- */
+a {
+	color: var(--color-link);
+	text-decoration: underline;
+}
+
+a:visited {
+	color: var(--color-visited);
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:focus {
+	outline: 2px dotted var(--color-link);
+	outline-offset: 2px;
+}
+
+a:active {
+	color: #ff0000;
+}
+
+/* --------------------------------------------
+   CODE & PREFORMATTED TEXT - Retro Terminal Style
+   -------------------------------------------- */
+code,
+kbd,
+samp,
+pre {
+	font-family: var(--font-mono);
+	font-size: 0.9em;
+}
+
+/* Inline code */
+code {
+	background-color: var(--color-code-bg);
+	padding: 0.15em 0.35em;
+	border: 1px solid var(--color-code-border);
+	border-radius: 2px;
+}
+
+/* Code blocks */
+pre {
+	background-color: #1a1a1a;
+	color: #00ff00;
+	padding: var(--spacing-md);
+	overflow-x: auto;
+	margin: var(--spacing-md) 0;
+	border: 3px ridge #444444;
+	box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+pre code {
+	background: none;
+	border: none;
+	padding: 0;
+	color: inherit;
+	font-size: 0.875rem;
+}
+
+/* Keyboard input styling */
+kbd {
+	background-color: #eeeeee;
+	border: 1px solid #999999;
+	border-bottom-width: 2px;
+	border-radius: 3px;
+	padding: 0.1em 0.4em;
+	font-size: 0.85em;
+}
+
+/* --------------------------------------------
+   LISTS
+   -------------------------------------------- */
+ul,
+ol {
+	margin: var(--spacing-md) 0;
+	padding-left: var(--spacing-xl);
+}
+
+li {
+	margin-bottom: var(--spacing-xs);
+}
+
+li > ul,
+li > ol {
+	margin: var(--spacing-xs) 0;
+}
+
+/* Classic bullet style */
+ul {
+	list-style-type: square;
+}
+
+ul ul {
+	list-style-type: disc;
+}
+
+ul ul ul {
+	list-style-type: circle;
+}
+
+/* --------------------------------------------
+   BLOCKQUOTES
+   -------------------------------------------- */
+blockquote {
+	margin: var(--spacing-lg) 0;
+	padding: var(--spacing-md) var(--spacing-lg);
+	border-left: 4px solid var(--color-border-dark);
+	background-color: rgba(0, 0, 0, 0.03);
+	font-style: italic;
+}
+
+blockquote cite {
+	display: block;
+	margin-top: var(--spacing-sm);
+	font-size: 0.9em;
+	color: var(--color-text-muted);
+	font-style: normal;
+}
+
+blockquote cite::before {
+	content: '-- ';
+}
+
+/* --------------------------------------------
+   HORIZONTAL RULES - Retro Dividers
+   -------------------------------------------- */
+hr {
+	border: none;
+	height: 2px;
+	background: linear-gradient(to right, transparent, var(--color-border-dark), transparent);
+	margin: var(--spacing-xl) 0;
+}
+
+/* Fancy retro HR */
+hr.retro {
+	height: auto;
+	background: none;
+	text-align: center;
+	overflow: visible;
+}
+
+hr.retro::before {
+	content: '* * * * *';
+	color: var(--color-text-muted);
+	letter-spacing: 0.5em;
+}
+
+/* --------------------------------------------
+   TABLES
+   -------------------------------------------- */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: var(--spacing-lg) 0;
+}
+
+th,
+td {
+	padding: var(--spacing-sm) var(--spacing-md);
+	text-align: left;
+	border: 1px solid var(--color-border-dark);
+}
+
+th {
+	background-color: var(--color-border-dark);
+	color: white;
+	font-weight: 700;
+}
+
+tr:nth-child(even) {
+	background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* --------------------------------------------
+   LAYOUT: CONTAINER
+   -------------------------------------------- */
+.container {
+	width: 100%;
+	max-width: var(--container-max);
+	margin: 0 auto;
+	padding: 0 var(--spacing-md);
+}
+
+.container-narrow {
+	max-width: 680px;
+}
+
+.container-wide {
+	max-width: 1200px;
+}
+
+/* --------------------------------------------
+   LAYOUT: TWO-COLUMN (Homepage Style)
+   -------------------------------------------- */
+.two-column {
+	display: grid;
+	grid-template-columns: 1fr var(--sidebar-width);
+	gap: var(--spacing-xl);
+}
+
+.two-column-main {
+	min-width: 0; /* Prevent overflow */
+}
+
+.two-column-sidebar {
+	min-width: 0;
+}
+
+/* Reverse layout (sidebar on left) */
+.two-column-reverse {
+	grid-template-columns: var(--sidebar-width) 1fr;
+}
+
+/* Responsive: Stack on smaller screens */
+@media (max-width: 768px) {
+	.two-column,
+	.two-column-reverse {
+		grid-template-columns: 1fr;
+	}
+
+	.two-column-sidebar {
+		order: -1; /* Sidebar on top on mobile */
+	}
+}
+
+/* --------------------------------------------
+   RETRO BORDER UTILITIES
+   -------------------------------------------- */
+
+/* Classic beveled/raised border (like Windows 95 buttons) */
+.border-raised {
+	border: 2px solid;
+	border-color: var(--color-border-light) var(--color-border-darker) var(--color-border-darker)
+		var(--color-border-light);
+	background-color: #c0c0c0;
+}
+
+/* Sunken/inset border */
+.border-sunken {
+	border: 2px solid;
+	border-color: var(--color-border-darker) var(--color-border-light) var(--color-border-light)
+		var(--color-border-darker);
+	background-color: #ffffff;
+}
+
+/* Ridge border (3D raised edge) */
+.border-ridge {
+	border: 3px ridge var(--color-border-dark);
+}
+
+/* Groove border (3D sunken edge) */
+.border-groove {
+	border: 3px groove var(--color-border-dark);
+}
+
+/* Double border */
+.border-double {
+	border: 4px double var(--color-border-dark);
+}
+
+/* Etched border effect */
+.border-etched {
+	border: 1px solid var(--color-border-dark);
+	box-shadow:
+		inset 1px 1px 0 var(--color-border-light),
+		1px 1px 0 var(--color-border-light);
+}
+
+/* Retro box with padding */
+.retro-box {
+	padding: var(--spacing-md);
+	margin: var(--spacing-md) 0;
+}
+
+/* --------------------------------------------
+   BRACKETED LINKS - [ Link Text ]
+   -------------------------------------------- */
+.link-bracketed::before {
+	content: '[ ';
+	color: var(--color-text-muted);
+	text-decoration: none;
+}
+
+.link-bracketed::after {
+	content: ' ]';
+	color: var(--color-text-muted);
+	text-decoration: none;
+}
+
+/* Navigation with bracketed links */
+.nav-bracketed {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--spacing-sm);
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.nav-bracketed a {
+	display: inline-block;
+}
+
+.nav-bracketed a::before {
+	content: '[ ';
+	color: var(--color-text-muted);
+	text-decoration: none;
+}
+
+.nav-bracketed a::after {
+	content: ' ]';
+	color: var(--color-text-muted);
+	text-decoration: none;
+}
+
+/* Pipe-separated navigation (another retro style) */
+.nav-piped {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.nav-piped li:not(:last-child)::after {
+	content: ' | ';
+	color: var(--color-text-muted);
+}
+
+/* --------------------------------------------
+   UTILITY CLASSES
+   -------------------------------------------- */
+
+/* Text alignment */
+.text-left {
+	text-align: left;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+
+/* Text styles */
+.text-muted {
+	color: var(--color-text-muted);
+}
+.text-small {
+	font-size: 0.875rem;
+}
+.text-mono {
+	font-family: var(--font-mono);
+}
+
+/* Spacing utilities */
+.mt-0 {
+	margin-top: 0;
+}
+.mb-0 {
+	margin-bottom: 0;
+}
+.mt-md {
+	margin-top: var(--spacing-md);
+}
+.mb-md {
+	margin-bottom: var(--spacing-md);
+}
+.mt-lg {
+	margin-top: var(--spacing-lg);
+}
+.mb-lg {
+	margin-bottom: var(--spacing-lg);
+}
+.mt-xl {
+	margin-top: var(--spacing-xl);
+}
+.mb-xl {
+	margin-bottom: var(--spacing-xl);
+}
+
+/* Display utilities */
+.hidden {
+	display: none;
+}
+.block {
+	display: block;
+}
+.inline {
+	display: inline;
+}
+.inline-block {
+	display: inline-block;
+}
+.flex {
+	display: flex;
+}
+.grid {
+	display: grid;
+}
+
+/* Flexbox utilities */
+.flex-wrap {
+	flex-wrap: wrap;
+}
+.items-center {
+	align-items: center;
+}
+.justify-between {
+	justify-content: space-between;
+}
+.gap-sm {
+	gap: var(--spacing-sm);
+}
+.gap-md {
+	gap: var(--spacing-md);
+}
+.gap-lg {
+	gap: var(--spacing-lg);
+}
+
+/* --------------------------------------------
+   RETRO DECORATIVE ELEMENTS
+   -------------------------------------------- */
+
+/* Under construction banner */
+.under-construction {
+	background: repeating-linear-gradient(
+		45deg,
+		#ffcc00,
+		#ffcc00 10px,
+		#000000 10px,
+		#000000 20px
+	);
+	color: #000000;
+	padding: var(--spacing-sm) var(--spacing-md);
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.under-construction span {
+	background-color: #ffcc00;
+	padding: 0.25em 0.5em;
+}
+
+/* Marquee-style text (static version) */
+.retro-marquee {
+	overflow: hidden;
+	white-space: nowrap;
+	background-color: #000080;
+	color: #ffff00;
+	padding: var(--spacing-xs) var(--spacing-md);
+}
+
+/* "New" badge */
+.badge-new {
+	display: inline-block;
+	background-color: #ff0000;
+	color: #ffffff;
+	font-size: 0.75rem;
+	font-weight: bold;
+	padding: 0.1em 0.4em;
+	text-transform: uppercase;
+	vertical-align: super;
+	animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+	50% {
+		opacity: 0;
+	}
+}
+
+/* No blink variant */
+.badge-new-static {
+	animation: none;
+}
+
+/* Visitor counter style box */
+.visitor-counter {
+	display: inline-block;
+	background-color: #000000;
+	color: #00ff00;
+	font-family: var(--font-mono);
+	padding: 0.25em 0.5em;
+	border: 2px inset #333333;
+}
+
+/* Guestbook/email link styling */
+.email-link {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--spacing-xs);
+}
+
+.email-link::before {
+	content: '\2709'; /* Envelope symbol */
+}
+
+/* --------------------------------------------
+   PAGE SECTIONS
+   -------------------------------------------- */
+.page-header {
+	padding: var(--spacing-xl) 0;
+	border-bottom: 2px solid var(--color-border-dark);
+	margin-bottom: var(--spacing-xl);
+}
+
+.page-content {
+	padding: var(--spacing-lg) 0;
+}
+
+.page-footer {
+	padding: var(--spacing-xl) 0;
+	border-top: 2px solid var(--color-border-dark);
+	margin-top: var(--spacing-xl);
+	text-align: center;
+	font-size: 0.875rem;
+	color: var(--color-text-muted);
+}
+
+/* --------------------------------------------
+   SIDEBAR COMPONENTS
+   -------------------------------------------- */
+.sidebar-section {
+	margin-bottom: var(--spacing-lg);
+}
+
+.sidebar-section h3,
+.sidebar-section h4 {
+	font-size: 1rem;
+	margin-top: 0;
+	margin-bottom: var(--spacing-sm);
+	padding-bottom: var(--spacing-xs);
+	border-bottom: 1px solid var(--color-border-dark);
+}
+
+.sidebar-nav {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.sidebar-nav li {
+	margin-bottom: var(--spacing-xs);
+}
+
+.sidebar-nav a {
+	display: block;
+	padding: var(--spacing-xs) 0;
+}
+
+.sidebar-nav a::before {
+	content: '\25B8 '; /* Small triangle */
+	color: var(--color-text-muted);
+}
+
+/* --------------------------------------------
+   WEBRING COMPONENT
+   -------------------------------------------- */
+.webring {
+	text-align: center;
+	padding: var(--spacing-md);
+	background-color: rgba(0, 0, 0, 0.03);
+	border: 1px solid var(--color-border-dark);
+	margin: var(--spacing-lg) 0;
+}
+
+.webring-title {
+	font-weight: bold;
+	margin-bottom: var(--spacing-sm);
+}
+
+.webring-nav {
+	display: flex;
+	justify-content: center;
+	gap: var(--spacing-md);
+}
+
+/* --------------------------------------------
+   RESPONSIVE ADJUSTMENTS
+   -------------------------------------------- */
+@media (max-width: 600px) {
+	:root {
+		--font-size-base: 16px;
+	}
+
+	h1 {
+		font-size: 1.75rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	h3 {
+		font-size: 1.25rem;
+	}
+
+	pre {
+		font-size: 0.8rem;
+	}
+}
+
+/* --------------------------------------------
+   PRINT STYLES
+   -------------------------------------------- */
+@media print {
+	body {
+		background-color: white;
+		color: black;
+	}
+
+	a {
+		color: black;
+		text-decoration: underline;
+	}
+
+	a[href]::after {
+		content: ' (' attr(href) ')';
+		font-size: 0.8em;
+	}
+
+	.two-column {
+		display: block;
+	}
+
+	.two-column-sidebar {
+		display: none;
+	}
+
+	pre {
+		background-color: #eeeeee;
+		color: black;
+		border: 1px solid #cccccc;
+	}
+}
